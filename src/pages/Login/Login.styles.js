@@ -8,11 +8,12 @@ const styles = StyleSheet.create({
   },
   image: {
     height: Dimensions.get('window').height / 4,
-    width: Dimensions.get('window').width,
     resizeMode: 'contain',
     tintColor: 'white',
     alignSelf: 'center',
     margin: 50,
+    marginTop: 100,
+    borderWidth: 2,
   },
   error: {
     color: 'red',

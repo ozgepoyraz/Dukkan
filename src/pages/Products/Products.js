@@ -13,7 +13,7 @@ import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
 const Products = ({navigation}) => {
-  const {data, loading, error} = useFetch(Config.API_URL);
+  const {data, loading, error} = useFetch(Config.API_PRODUCTS_URL);
 
   const handleProductSelect = id => {
     navigation.navigate('Details', {id});

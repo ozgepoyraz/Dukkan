@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#85dae6',
+    borderColor: '#3ea7b5',
   },
   title: {
     color: 'white',

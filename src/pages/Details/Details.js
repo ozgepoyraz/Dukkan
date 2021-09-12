@@ -7,7 +7,7 @@ import styles from './Details.styles';
 
 const Details = ({route}) => {
   const {id} = route.params;
-  const {data, loading, error} = useFetch(Config.API_URL + '/' + id);
+  const {data, loading, error} = useFetch(Config.API_PRODUCTS_URL + '/' + id);
 
   if (loading) {
     return <Loading />;
