@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     margin: 50,
   },
+  error: {
+    color: 'red',
+    textAlign: 'center',
+  },
 });
 
 export default styles;
