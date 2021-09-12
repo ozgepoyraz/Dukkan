@@ -8,14 +8,14 @@ import * as yup from 'yup';
 import usePost from '../../hook/usePost';
 import Config from 'react-native-config';
 import Error from '../../components/Error';
+import {useDispatch} from 'react-redux';
 
-const Login = ({navigation}) => {
+const Login = () => {
   const {data, loading, error, post} = usePost();
+  const dispatch = useDispatch();
 
   const handleLogin = values => {
-    console.log;
     post(Config.API_USERS_URL + '/login', values);
-    console.log(data);
   };
 
   const loginValidationSchema = yup.object().shape({
@@ -30,7 +30,7 @@ const Login = ({navigation}) => {
     if (data.status == 'Error') {
       Alert.alert('Uyarı', 'Kullanıcı bulunamadı.');
     } else {
-      navigation.navigate('Products');
+      dispatch({type: 'SET_USER', payload: {user: data}});
     }
   }
 
