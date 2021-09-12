@@ -1,15 +1,19 @@
-import {TextInput} from 'react-native';
+import {TextInput, View} from 'react-native';
 import React from 'react';
 import styles from './Input.styles';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Input = ({hint, value, onChangeText, securityTextEntry}) => {
+const Input = ({hint, value, onChangeText, securityTextEntry, icon}) => {
   return (
-    <TextInput
-      style={styles.input}
-      placeholder={hint}
-      value={value}
-      onChangeText={onChangeText}
-      secureTextEntry={securityTextEntry}></TextInput>
+    <View style={styles.input}>
+      <Icon style={styles.icon} name={icon} size={25} />
+      <TextInput
+        placeholder={hint}
+        value={value}
+        onChangeText={onChangeText}
+        secureTextEntry={securityTextEntry}
+      />
+    </View>
   );
 };
 

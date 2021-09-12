@@ -40,11 +40,13 @@ const Login = () => {
               hint="Emailinizi giriniz."
               value={values.email}
               onChangeText={handleChange('email')}
+              icon="account"
             />
             <Input
               hint="Şifrenizi giriniz."
               value={values.password}
               onChangeText={handleChange('password')}
+              icon="lock"
               securityTextEntry
             />
             <Button title="GİRİŞ YAP" onPress={handleSubmit}></Button>
