@@ -36,11 +36,6 @@ const Products = ({navigation}) => {
 
   return (
     <View style={{backgroundColor: '#4dcbdb'}}>
-      <Button
-        loading={loading}
-        title="Log out"
-        onPress={() => dispatch({type: 'SET_USER', payload: {user: null}})}
-      />
       <FlatList data={data} renderItem={renderProducts} />
     </View>
   );

@@ -5,6 +5,7 @@ import Products from './pages/Products';
 import Details from './pages/Details';
 import Login from './pages/Login';
 import {useSelector} from 'react-redux';
+import LogOut from './components/LogOut/LogOut';
 
 function Routes() {
   const Stack = createStackNavigator();
@@ -27,7 +28,10 @@ function Routes() {
             <Stack.Screen
               name="Products"
               component={Products}
-              options={{headerTitleAlign: 'center'}}
+              options={{
+                headerTitleAlign: 'center',
+                headerRight: () => <LogOut></LogOut>,
+              }}
             />
             <Stack.Screen
               name="Details"
